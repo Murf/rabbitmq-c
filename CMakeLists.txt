@@ -127,7 +127,7 @@ find_path(RABBITMQ_CODEGEN_DIR
         )
 
 if (RABBITMQ_CODEGEN_DIR STREQUAL "RABBITMQ_CODEGEN_DIR-NOTFOUND")
-  message(SEND_ERROR "Cannot find amqp_codegen.py, did you forget to:\n\ngit submodule init\ngit submodule update\n?")
+  message(SEND_ERROR "Cannot find amqp_codegen.py, SEE IF THIS IS BEING USED did you forget to:\n\ngit submodule init\ngit submodule update\n?")
 else ()
   message(STATUS "Using amqp_codegen.py in ${RABBITMQ_CODEGEN_DIR}")
 endif()
