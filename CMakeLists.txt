@@ -126,11 +126,11 @@ find_path(RABBITMQ_CODEGEN_DIR
         NO_DEFAULT_PATH
         )
 
-if (RABBITMQ_CODEGEN_DIR STREQUAL "RABBITMQ_CODEGEN_DIR-NOTFOUND")
-  message(SEND_ERROR "Cannot find amqp_codegen.py, SEE IF THIS IS BEING USED did you forget to:\n\ngit submodule init\ngit submodule update\n?")
-else ()
+#if (RABBITMQ_CODEGEN_DIR STREQUAL "RABBITMQ_CODEGEN_DIR-NOTFOUND")
+#  message(SEND_ERROR "Cannot find amqp_codegen.py, SEE IF THIS IS BEING USED did you forget to:\n\ngit submodule init\ngit submodule update\n?")
+#else ()
   message(STATUS "Using amqp_codegen.py in ${RABBITMQ_CODEGEN_DIR}")
-endif()
+#endif()
 
 set(AMQP_CODEGEN_DIR ${RABBITMQ_CODEGEN_DIR} CACHE PATH "Path to rabbitmq-codegen" FORCE)
 mark_as_advanced(AMQP_CODEGEN_DIR)
